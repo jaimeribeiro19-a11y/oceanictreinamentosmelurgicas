@@ -1,2250 +1,703 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oceanic Treinamentos — Metalúrgicas</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Treinamentos e NRs para metalúrgicas: trilhas por função, certificados, gestão e conformidade. Capacitação prática para reduzir riscos e aumentar produtividade." />
-  <meta name="theme-color" content="#0a1f3c" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Oceanic Treinamentos — Metalúrgicas" />
-  <meta property="og:description" content="Treinamentos e NRs para metalúrgicas com trilhas por função, certificados e conformidade." />
-  <meta property="og:type" content="website" />
-
-  <!-- Favicon (inline SVG) -->
-  <link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Cdefs%3E%3ClinearGradient id="g" x1="0" y1="0" x2="1" y2="1"%3E%3Cstop stop-color="%231565c0"/%3E%3Cstop offset="1" stop-color="%2329b6f6"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="64" height="64" rx="14" fill="url(%23g)"/%3E%3Cpath d="M18 44V20h7l7 15 7-15h7v24h-6V30l-7 14h-2l-7-14v14z" fill="white"/%3E%3C/svg%3E' />
-
+  <meta charset="UTF-8">
+  <title>Consultoria em Conformidade para Marmorarias em Cachoeiro/ES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consultoria especializada em conformidade legal para marmorarias de Cachoeiro/ES. Cuidamos de licenças do IEMA, CBMES, Prefeitura e documentos de Segurança do Trabalho. Agende um diagnóstico gratuito.">
   <style>
-    /* ========== RESET ========== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-      background: #f0f4f8;
-      color: #1a2a3a;
-      line-height: 1.6;
-    }
-
     :root {
-      --ocean-deep:    #0a1f3c;
-      --ocean-mid:     #0d3b6e;
-      --ocean-blue:    #1565c0;
-      --ocean-light:   #1e88e5;
-      --ocean-bright:  #29b6f6;
-      --ocean-foam:    #e3f2fd;
-      --ocean-teal:    #00838f;
-      --dark:          #060f1a;
-      --gray:          #546e7a;
-      --light:         #f0f7ff;
-      --white:         #ffffff;
-      --success:       #00897b;
-      --warning:       #f57c00;
-      --danger:        #c62828;
-      --radius:        12px;
-      --shadow:        0 14px 44px rgba(13,59,110,0.14);
-      --shadow-soft:   0 4px 18px rgba(13,59,110,0.08);
+      --primary: #0f766e;
+      --primary-dark: #0b4f49;
+      --accent: #f97316;
+      --bg: #f5f5f5;
+      --text: #111827;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --max-width: 1120px;
+      --radius: 8px;
     }
 
-    /* A11y helper */
-    .sr-only {
-      position: absolute !important;
-      width: 1px; height: 1px;
-      padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0, 0, 0, 0);
-      white-space: nowrap; border: 0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Skip link */
-    .skip-link {
-      position: absolute;
-      left: 10px; top: 10px;
-      background: var(--white);
-      color: var(--ocean-deep);
-      border: 2px solid var(--ocean-bright);
-      padding: 10px 12px;
-      border-radius: 10px;
-      transform: translateY(-150%);
-      transition: transform .2s ease;
-      z-index: 5000;
-      text-decoration: none;
-      font-weight: 800;
-    }
-    .skip-link:focus { transform: translateY(0); outline: none; }
-
-    /* ========== HEADER ========== */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 999;
-      background: rgba(6,15,26,0.97);
-      backdrop-filter: blur(10px);
-      height: 70px;
-      border-bottom: 2px solid var(--ocean-bright);
-    }
-    .header-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      height: 70px;
-      padding: 0 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo-icon {
-      width: 42px; height: 42px;
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      border-radius: 10px;
-      display: grid; place-items: center;
-      font-size: 20px;
-      color: var(--white);
-      font-weight: 900;
-      letter-spacing: 0.5px;
-    }
-    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-    .logo-name { color: var(--white); font-size: 1.25rem; font-weight: 900; letter-spacing: 0.6px; }
-    .logo-name span { color: var(--ocean-bright); }
-    .logo-sub { color: var(--ocean-bright); font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; }
-
-    .nav {
-      display: flex; align-items: center; gap: 18px;
-    }
-    .nav a {
-      color: #90b4d0;
-      text-decoration: none;
-      font-size: 0.92rem;
-      transition: color 0.2s;
-      padding: 6px 2px;
-    }
-    .nav a:hover, .nav a:focus { color: var(--ocean-bright); outline: none; }
-    .btn-nav {
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      color: var(--white) !important;
-      padding: 9px 16px !important;
-      border-radius: 8px;
-      font-weight: 900;
-      font-size: 0.88rem !important;
-      transition: opacity 0.2s !important;
-    }
-    .btn-nav:hover { opacity: 0.9; }
-
-    /* Mobile menu */
-    .menu-btn {
-      display: none;
-      border: 1px solid rgba(41,182,246,0.35);
-      background: rgba(255,255,255,0.06);
-      color: var(--white);
-      border-radius: 10px;
-      padding: 10px 12px;
-      cursor: pointer;
-      font-weight: 900;
-    }
-    .menu-btn:focus { outline: 2px solid var(--ocean-bright); outline-offset: 2px; }
-
-    .nav-mobile {
-      display: none;
-      position: absolute;
-      top: 70px; left: 0; right: 0;
-      background: rgba(6,15,26,0.98);
-      border-bottom: 2px solid rgba(41,182,246,0.25);
-    }
-    .nav-mobile-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 12px 18px 18px;
-      display: grid;
-      gap: 10px;
-    }
-    .nav-mobile a {
-      color: #b3d2ee;
-      text-decoration: none;
-      padding: 10px 12px;
-      border: 1px solid rgba(41,182,246,0.14);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.04);
-      font-weight: 700;
-    }
-    .nav-mobile a:focus { outline: 2px solid var(--ocean-bright); outline-offset: 2px; }
-    .nav-mobile.open { display: block; }
-
-    /* ========== HERO ========== */
-    .hero {
-      min-height: 100vh;
-      background:
-        linear-gradient(160deg, rgba(6,15,26,0.92) 0%, rgba(13,59,110,0.82) 60%, rgba(21,101,192,0.70) 100%),
-        url('https://images.unsplash.com/photo-1516216694622-a7b51959787e?w=1600&q=80') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 110px 18px 60px;
-    }
-    .hero-content { max-width: 900px; }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(41,182,246,0.15);
-      border: 1px solid rgba(41,182,246,0.55);
-      color: var(--ocean-bright);
-      padding: 6px 18px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      color: var(--white);
-      font-weight: 950;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-    .hero h1 span { color: var(--ocean-bright); }
-    .hero p {
-      color: #a8c8e8;
-      font-size: clamp(1rem, 2vw, 1.18rem);
-      margin-bottom: 26px;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary, .btn-secondary {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      cursor: pointer;
-      font-weight: 900;
-      font-size: 1rem;
-      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s, color 0.18s, opacity .18s;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      color: var(--white);
-      border: 0;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(30,136,229,0.45); }
-    .btn-secondary {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255,255,255,0.35);
-    }
-    .btn-secondary:hover { border-color: var(--ocean-bright); color: var(--ocean-bright); }
-
-    .hero-stats {
-      margin-top: 44px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(140px, 1fr));
-      gap: 0;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(41,182,246,0.2);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-    .stat {
-      padding: 18px 18px;
-      border-right: 1px solid rgba(41,182,246,0.15);
-    }
-    .stat:last-child { border-right: none; }
-    .stat-number { font-size: 1.8rem; font-weight: 950; color: var(--ocean-bright); }
-    .stat-label { font-size: 0.78rem; color: #7aa8c8; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; font-weight: 800; }
-
-    /* ========== SEÇÕES ========== */
-    main { display: block; }
-    section { padding: 84px 18px; }
-    .container { max-width: 1160px; margin: 0 auto; }
-    .section-tag {
-      text-align: center;
-      display: block;
-      font-size: 0.75rem;
-      font-weight: 950;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--ocean-light);
-      margin-bottom: 10px;
-    }
-    .section-title {
-      text-align: center;
-      font-size: clamp(1.6rem, 3.5vw, 2.35rem);
-      font-weight: 950;
-      color: var(--ocean-deep);
-      margin-bottom: 12px;
-    }
-    .section-sub {
-      text-align: center;
-      color: var(--gray);
-      font-size: 1.05rem;
-      max-width: 760px;
-      margin: 0 auto 44px;
-    }
-
-    /* ========== PROBLEMA ========== */
-    .problema { background: var(--ocean-deep); }
-    .problema .section-title { color: var(--white); }
-    .problema .section-sub { color: #6a90b0; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .card-dark {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(41,182,246,0.12);
-      border-radius: var(--radius);
-      padding: 26px 22px;
-      transition: border-color 0.22s, background 0.22s, transform 0.22s;
-    }
-    .card-dark:hover { border-color: rgba(41,182,246,0.38); background: rgba(41,182,246,0.06); transform: translateY(-2px); }
-    .card-dark .icon { font-size: 2.2rem; margin-bottom: 12px; }
-    .card-dark h3 { color: var(--white); font-size: 1.02rem; margin-bottom: 8px; font-weight: 900; }
-    .card-dark p { color: #6a90b0; font-size: 0.92rem; }
-
-    /* ========== SOLUÇÃO ========== */
-    .solucao { background: var(--light); }
-    .solucao-content { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 44px; align-items: center; }
-    .solucao-img {
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      position: relative;
-    }
-    .solucao-img img { width: 100%; display: block; }
-    .solucao-pill {
-      position: absolute;
-      bottom: 16px; right: 16px;
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      color: var(--white);
-      font-weight: 950;
-      font-size: 0.82rem;
-      padding: 8px 14px;
-      border-radius: 999px;
-    }
-    .solucao-text h3 {
-      font-size: clamp(1.3rem, 2.4vw, 1.8rem);
-      color: var(--ocean-deep);
-      font-weight: 950;
-      margin-bottom: 12px;
-    }
-    .solucao-text p { color: var(--gray); margin-bottom: 14px; }
-    .check-list { list-style: none; margin-top: 10px; }
-    .check-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 10px;
-      color: var(--ocean-deep);
-      font-weight: 650;
-    }
-    .check-list li::before {
-      content: '✓';
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      color: var(--white);
-      width: 22px; height: 22px;
-      border-radius: 50%;
-      display: grid; place-items: center;
-      font-size: 0.72rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-      font-weight: 950;
-    }
-
-    /* ========== CURSOS ========== */
-    .cursos { background: #e8f1fb; }
-    .toolbar {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      max-width: 860px;
-      margin: 0 auto 22px;
-    }
-    .toolbar .field {
-      background: rgba(255,255,255,0.85);
-      border: 1px solid #d0e8f8;
-      border-radius: 14px;
-      padding: 12px 12px;
-      box-shadow: 0 8px 26px rgba(13,59,110,0.06);
-    }
-    .field label {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 950;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--ocean-mid);
-      margin-bottom: 8px;
-    }
-    .field select, .field input {
-      width: 100%;
-      border: 1px solid #d0e8f8;
-      border-radius: 12px;
-      padding: 12px 12px;
-      font-size: 0.95rem;
-      outline: none;
-      background: var(--white);
-      color: var(--ocean-deep);
-      font-weight: 650;
-    }
-    .field select:focus, .field input:focus {
-      border-color: var(--ocean-bright);
-      box-shadow: 0 0 0 3px rgba(41,182,246,0.18);
-    }
-
-    .cursos-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    /* Make course cards accessible: use <button> */
-    .curso-card {
-      appearance: none;
-      width: 100%;
-      text-align: left;
-      border: 0;
-      background: var(--white);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      transition: transform 0.20s, box-shadow 0.20s;
-      position: relative;
-      cursor: pointer;
-    }
-    .curso-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .curso-card:focus { outline: 3px solid rgba(41,182,246,0.7); outline-offset: 2px; }
-
-    .curso-header {
-      padding: 18px 18px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 1px solid #e3f2fd;
-    }
-    .curso-icon-wrap {
-      width: 50px; height: 50px;
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      border-radius: 12px;
-      display: grid; place-items: center;
-      font-size: 1.45rem;
-      flex-shrink: 0;
-      color: var(--white);
-    }
-    .curso-header-text h3 { font-size: 0.98rem; color: var(--ocean-deep); font-weight: 950; line-height: 1.25; }
-    .curso-header-text span { font-size: 0.78rem; color: var(--ocean-light); font-weight: 850; }
-
-    .badges {
-      position: absolute;
-      top: 12px; right: 12px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      max-width: 62%;
-    }
-    .badge {
-      font-size: 0.68rem;
-      font-weight: 950;
-      padding: 4px 8px;
-      border-radius: 999px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-      background: #f1f5f9;
-      color: #334155;
-    }
-    .badge-nr {
-      background: var(--ocean-deep);
-      color: var(--ocean-bright);
-      border-color: rgba(41,182,246,0.18);
-    }
-    .badge-funcao {
-      background: #fff3cd;
-      color: #856404;
-      border-color: #ffc107;
-    }
-    .badge-recomendado {
-      background: #e0f7fa;
-      color: #006064;
-      border-color: rgba(0,131,143,0.35);
-    }
-
-    .curso-body { padding: 14px 18px 44px; }
-    .curso-body p { font-size: 0.9rem; color: var(--gray); margin-bottom: 10px; }
-    .curso-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.8rem; color: #78909c; font-weight: 750; }
-    .curso-meta span { display: inline-flex; gap: 6px; align-items: center; }
-    .curso-cta {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      color: var(--white);
-      text-align: center;
-      font-size: 0.84rem;
-      font-weight: 950;
-      padding: 10px 12px;
-      opacity: 0.0;
-      transition: opacity 0.20s;
-      letter-spacing: 0.4px;
-    }
-    .curso-card:hover .curso-cta { opacity: 1; }
-
-    .cursos-note {
-      max-width: 980px;
-      margin: 22px auto 0;
-      background: rgba(255,255,255,0.75);
-      border: 1px solid #d0e8f8;
-      border-radius: 14px;
-      padding: 14px 14px;
-      color: var(--gray);
-      font-size: 0.92rem;
-      box-shadow: 0 10px 24px rgba(13,59,110,0.06);
-    }
-    .cursos-note strong { color: var(--ocean-deep); }
-
-    /* ========== MODAL ========== */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(6,15,26,0.84);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
-      backdrop-filter: blur(4px);
-    }
-    .modal-overlay.open { display: flex; }
-
-    .modal-box {
-      background: var(--white);
-      border-radius: 18px;
-      max-width: 720px;
-      width: 100%;
-      max-height: 90vh;
-      overflow: auto;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.42);
-      animation: modalIn 0.22s ease;
-      position: relative;
-    }
-    @keyframes modalIn {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .modal-header {
-      background: linear-gradient(135deg, var(--ocean-mid), var(--ocean-blue));
-      padding: 22px 22px 18px;
-      border-radius: 18px 18px 0 0;
-      position: relative;
-    }
-    .modal-top { display: flex; gap: 12px; align-items: center; }
-    .modal-icon {
-      width: 54px; height: 54px;
-      border-radius: 14px;
-      display: grid; place-items: center;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: var(--white);
-      font-size: 1.6rem;
-      flex-shrink: 0;
-    }
-    .modal-title { color: var(--white); font-weight: 950; font-size: 1.15rem; line-height: 1.25; }
-    .modal-sub { color: var(--ocean-bright); font-weight: 900; font-size: 0.85rem; margin-top: 4px; display: block; }
-    .modal-close {
-      position: absolute;
-      top: 14px; right: 14px;
-      width: 38px; height: 38px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(255,255,255,0.12);
-      color: var(--white);
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: grid; place-items: center;
-    }
-    .modal-close:focus { outline: 2px solid var(--ocean-bright); outline-offset: 2px; }
-
-    .modal-body { padding: 18px 22px 10px; }
-    .modal-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-    .modal-section { margin-bottom: 16px; }
-    .modal-section h4 {
-      font-size: 0.78rem;
-      font-weight: 950;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--ocean-light);
-      margin-bottom: 8px;
-    }
-    .modal-section p { color: var(--gray); font-size: 0.94rem; }
-    .modal-section ul { list-style: none; }
-    .modal-section li {
-      padding: 7px 0;
-      border-bottom: 1px solid #eef4fb;
-      color: var(--ocean-deep);
-      font-weight: 650;
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      font-size: 0.92rem;
-    }
-    .modal-section li:last-child { border-bottom: none; }
-    .modal-section li::before { content: "▸"; color: var(--ocean-bright); margin-top: 2px; font-weight: 950; }
-
-    .modal-meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .meta-item {
-      background: #f0f7ff;
-      border: 1px solid #d0e8f8;
-      border-radius: 14px;
-      padding: 12px 12px;
-    }
-    .meta-item .label {
-      font-size: 0.72rem;
-      font-weight: 950;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 6px;
-    }
-    .meta-item .value {
-      font-size: 0.95rem;
-      font-weight: 950;
-      color: var(--ocean-deep);
-    }
-    .meta-wide { grid-column: 1 / -1; }
-
-    .modal-footer {
-      padding: 0 22px 18px;
-      display: grid;
-      gap: 10px;
-    }
-    .modal-footer a {
-      text-align: center;
-      padding: 13px 14px;
-      border-radius: 12px;
-      font-weight: 950;
-      text-decoration: none;
-      display: block;
-      border: 2px solid transparent;
-    }
-    .modal-footer .primary {
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      color: var(--white);
-    }
-    .modal-footer .ghost {
-      background: transparent;
-      border-color: rgba(21,101,192,0.35);
-      color: var(--ocean-blue);
-    }
-    .modal-footer a:focus { outline: 3px solid rgba(41,182,246,0.6); outline-offset: 2px; }
-
-    /* ========== FUNCIONALIDADES ========== */
-    .funcionalidades { background: var(--white); }
-    .func-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .func-card {
-      text-align: center;
-      padding: 26px 18px;
-      border-radius: var(--radius);
-      border: 1px solid #d0e8f8;
-      transition: border-color 0.20s, box-shadow 0.20s, transform 0.20s;
-      background: linear-gradient(180deg, rgba(240,247,255,0.55), rgba(255,255,255,1));
-    }
-    .func-card:hover { border-color: rgba(30,136,229,0.7); box-shadow: var(--shadow-soft); transform: translateY(-2px); }
-    .func-icon { font-size: 2.3rem; margin-bottom: 10px; }
-    .func-card h3 { font-size: 1rem; color: var(--ocean-deep); margin-bottom: 6px; font-weight: 950; }
-    .func-card p { font-size: 0.9rem; color: var(--gray); }
-
-    /* ========== CONFORMIDADE ========== */
-    .conformidade { background: var(--ocean-deep); }
-    .conformidade .section-title { color: var(--white); }
-    .conformidade .section-sub { color: #6a90b0; }
-    .conf-table-wrap {
-      overflow-x: auto;
-      border-radius: var(--radius);
-      box-shadow: 0 12px 46px rgba(0,0,0,0.28);
-      border: 1px solid rgba(41,182,246,0.18);
-    }
-    table { width: 100%; border-collapse: collapse; background: var(--white); font-size: 0.92rem; }
-    thead { background: linear-gradient(135deg, var(--ocean-mid), var(--ocean-blue)); }
-    thead th {
-      padding: 14px 16px;
-      text-align: left;
-      color: var(--white);
-      font-weight: 950;
-      font-size: 0.84rem;
-      letter-spacing: 0.6px;
-    }
-    tbody tr { border-bottom: 1px solid #e3f2fd; }
-    tbody tr:hover { background: #f0f7ff; }
-    tbody td { padding: 12px 16px; color: var(--ocean-deep); vertical-align: top; }
-    .status {
-      display: inline-block;
-      font-size: 0.74rem;
-      font-weight: 950;
-      padding: 4px 10px;
-      border-radius: 999px;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-    }
-    .status-disponivel { background: #d0f0e8; color: #00695c; border-color: rgba(0,137,123,0.22); }
-    .status-opcional { background: #fff3cd; color: #856404; border-color: rgba(255,193,7,0.55); }
-
-    .conf-note {
-      max-width: 980px;
-      margin: 16px auto 0;
-      color: #9fc1dd;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-    .conf-note strong { color: var(--white); }
-
-    /* ========== DEPOIMENTOS ========== */
-    .depoimentos { background: var(--light); }
-    .dep-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .dep-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 24px 20px;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      border-top: 3px solid var(--ocean-light);
-    }
-    .dep-card::before {
-      content: '"';
-      position: absolute;
-      top: 10px; right: 14px;
-      font-size: 4.2rem;
-      color: #d0e8f8;
-      font-family: Georgia, serif;
-      line-height: 1;
-    }
-    .dep-stars { color: var(--ocean-bright); font-size: 1rem; margin-bottom: 10px; }
-    .dep-card p { font-size: 0.92rem; color: var(--gray); margin-bottom: 14px; font-style: italic; }
-    .dep-author { display: flex; align-items: center; gap: 10px; }
-    .dep-avatar {
-      width: 44px; height: 44px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-teal));
-      display: grid; place-items: center;
-      color: var(--white);
-      font-weight: 950;
-    }
-    .dep-name { font-weight: 950; color: var(--ocean-deep); font-size: 0.92rem; }
-    .dep-role { font-size: 0.78rem; color: #78909c; font-weight: 700; }
-
-    /* ========== PLANOS ========== */
-    .planos { background: #e8f1fb; }
-    .planos-grid {
-      max-width: 1040px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 18px;
-      align-items: start;
-    }
-    .plano-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 28px 20px;
-      border: 2px solid #d0e8f8;
-      box-shadow: 0 10px 28px rgba(13,59,110,0.07);
-      transition: transform 0.2s, box-shadow 0.2s, border-color .2s;
-      position: relative;
-    }
-    .plano-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(30,136,229,0.55); }
-    .plano-card.destaque { border-color: rgba(41,182,246,0.9); box-shadow: 0 16px 52px rgba(21,101,192,0.20); }
-    .plano-badge {
-      position: absolute;
-      top: -14px; left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright));
-      color: var(--white);
-      font-size: 0.74rem;
-      font-weight: 950;
-      padding: 5px 14px;
-      border-radius: 999px;
-      white-space: nowrap;
-    }
-    .plano-nome {
-      font-size: 0.82rem;
-      font-weight: 950;
-      color: var(--gray);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-    .plano-preco {
-      font-size: 1.7rem;
-      font-weight: 950;
-      color: var(--ocean-deep);
-      margin-bottom: 8px;
-      line-height: 1.2;
-    }
-    .plano-desc { font-size: 0.9rem; color: var(--gray); margin-bottom: 14px; }
-    .plano-lista { list-style: none; margin-bottom: 16px; }
-    .plano-lista li {
-      padding: 8px 0;
-      font-size: 0.9rem;
-      color: var(--ocean-deep);
-      border-bottom: 1px solid #eef4fb;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-weight: 650;
-    }
-    .plano-lista li:last-child { border-bottom: none; }
-    .plano-lista .ok { color: var(--success); font-weight: 950; }
-    .plano-lista .no { color: #cfd8dc; font-weight: 950; }
-
-    .btn-plano {
-      width: 100%;
-      display: block;
-      text-align: center;
-      padding: 12px 14px;
-      border-radius: 12px;
-      font-weight: 950;
-      text-decoration: none;
-      border: 2px solid transparent;
-    }
-    .btn-plano.solid { background: linear-gradient(135deg, var(--ocean-blue), var(--ocean-bright)); color: var(--white); }
-    .btn-plano.outline { background: transparent; border-color: rgba(21,101,192,0.45); color: var(--ocean-blue); }
-    .btn-plano:focus { outline: 3px solid rgba(41,182,246,0.6); outline-offset: 2px; }
-
-    /* ========== FAQ ========== */
-    .faq { background: var(--white); }
-    .faq-list { max-width: 860px; margin: 0 auto; }
-    .faq-item { border-bottom: 1px solid #d0e8f8; }
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      text-align: left;
-      padding: 18px 0;
-      font-size: 1rem;
-      font-weight: 900;
-      color: var(--ocean-deep);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-    .faq-question:focus { outline: 3px solid rgba(41,182,246,0.55); outline-offset: 4px; border-radius: 10px; }
-    .faq-arrow { font-size: 1.1rem; transition: transform 0.25s; color: var(--ocean-light); flex-shrink: 0; }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .faq-answer.open { max-height: 420px; }
-    .faq-answer p { font-size: 0.93rem; color: var(--gray); padding-bottom: 18px; }
-    .faq-item.active .faq-arrow { transform: rotate(180deg); }
-
-    /* ========== CTA FINAL / CONTATO ========== */
-    .cta-final {
-      background:
-        linear-gradient(160deg, rgba(6,15,26,0.95) 0%, rgba(13,59,110,0.90) 60%, rgba(21,101,192,0.80) 100%),
-        url('https://images.unsplash.com/photo-1581092918044-f17691642299?w=1200&q=70') center/cover no-repeat;
-      text-align: center;
-      padding: 96px 18px;
-    }
-    .cta-final h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: var(--white);
-      font-weight: 950;
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-    .cta-final p {
-      color: #a8c8e8;
-      font-size: clamp(1rem, 2vw, 1.12rem);
-      margin-bottom: 22px;
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .contact-card {
-      max-width: 860px;
-      margin: 0 auto;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(41,182,246,0.22);
-      border-radius: 18px;
-      padding: 18px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 18px 56px rgba(0,0,0,0.25);
-      text-align: left;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .contact-grid .full { grid-column: 1 / -1; }
-    .contact-card label {
-      display: block;
-      color: #d7ecff;
-      font-weight: 950;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      margin-bottom: 8px;
-    }
-    .contact-card input, .contact-card textarea {
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid rgba(41,182,246,0.28);
-      background: rgba(255,255,255,0.08);
-      color: var(--white);
-      padding: 12px 12px;
-      outline: none;
-      font-size: 0.98rem;
-    }
-    .contact-card textarea { min-height: 110px; resize: vertical; }
-    .contact-card input:focus, .contact-card textarea:focus {
-      border-color: var(--ocean-bright);
-      box-shadow: 0 0 0 3px rgba(41,182,246,0.2);
-    }
-    .contact-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-start;
-      margin-top: 12px;
-      flex-wrap: wrap;
-    }
-    .contact-hint {
-      color: #b8d7f2;
-      font-size: 0.9rem;
-      margin-top: 10px;
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
       line-height: 1.5;
     }
 
-    /* ========== FOOTER ========== */
-    footer {
-      background: var(--dark);
-      color: #90b4d0;
-      padding: 42px 18px;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f766e, #022c22);
+      color: var(--white);
+      padding: 24px 0;
+    }
+
+    header .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    header .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    header .tagline {
+      font-size: 0.9rem;
+      color: #d1fae5;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: #a7f3d0;
+    }
+
+    .hero {
+      padding: 24px 0 48px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #a7f3d0;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero p.subheadline {
+      font-size: 1rem;
+      color: #e5e7eb;
+      margin-bottom: 24px;
+      max-width: 540px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.08s ease;
+    }
+
+    .btn-primary:hover {
+      background: #ea580c;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 1px solid rgba(209, 250, 229, 0.8);
+      color: #d1fae5;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(16, 185, 129, 0.15);
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: #bbf7d0;
+    }
+
+    .hero-card {
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.85rem;
+    }
+
+    .hero-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #e5e7eb;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .hero-card li {
+      margin-bottom: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      color: #cbd5f5;
+    }
+
+    .hero-card li span {
+      color: #34d399;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    main {
+      padding: 40px 0 60px;
+    }
+
+    section {
+      padding: 32px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    h2.section-title {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+
+    .section-intro {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 16px;
+    }
+
+    .problem-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .problem-list li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .problem-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .highlight-box {
+      background: #fef3c7;
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      border: 1px solid #fcd34d;
+      color: #92400e;
+      margin-top: 12px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid #e5e7eb;
+      padding: 16px 18px;
+      font-size: 0.94rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .card li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .step-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 8px;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 8px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 6px;
+      padding-left: 18px;
+      position: relative;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 2fr);
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .faq-item {
+      border-radius: var(--radius);
+      border: 1px solid #e5e7eb;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      background: #ffffff;
+    }
+
+    .faq-item h3 {
+      font-size: 0.96rem;
+      margin-bottom: 4px;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .cta-final {
       text-align: center;
-      font-size: 0.88rem;
-    }
-    footer a { color: var(--ocean-bright); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    /* ========== RESPONSIVO ========== */
-    @media (max-width: 1024px) {
-      .grid-3, .cursos-grid, .func-grid, .dep-grid, .planos-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .solucao-content { grid-template-columns: 1fr; gap: 18px; }
-      .solucao-img { order: -1; }
-    }
-    @media (max-width: 760px) {
-      .hero-stats { grid-template-columns: 1fr; }
-      .stat { border-right: none; border-bottom: 1px solid rgba(41,182,246,0.15); }
-      .stat:last-child { border-bottom: none; }
-
-      .nav { display: none; }
-      .menu-btn { display: inline-flex; align-items: center; gap: 8px; }
-
-      .toolbar { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 520px) {
-      .grid-3, .cursos-grid, .func-grid, .dep-grid, .planos-grid { grid-template-columns: 1fr; }
-      .hero-btns { flex-direction: column; }
-      .btn-primary, .btn-secondary { width: 100%; }
-      .modal-meta { grid-template-columns: 1fr; }
     }
 
-    /* Reduce motion */
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; animation: none !important; }
+    .cta-final p {
+      font-size: 0.96rem;
+      color: var(--muted);
+      margin: 8px auto 20px;
+      max-width: 520px;
+    }
+
+    .cta-final small {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .form-wrapper {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: var(--radius);
+      border: 1px solid #e5e7eb;
+      padding: 18px 18px 20px;
+      text-align: left;
+    }
+
+    .form-row {
+      margin-bottom: 10px;
+    }
+
+    .form-row label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      background: #f9fafb;
+    }
+
+    .form-row textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(15, 118, 110, 0.25);
+      background: #ffffff;
+    }
+
+    .form-helper {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+
+    footer {
+      padding: 18px 0 24px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+      background: #f9fafb;
+      margin-top: 24px;
+    }
+
+    footer .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero {
+        padding-bottom: 32px;
+      }
+      header .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        flex-wrap: wrap;
+      }
+      .grid-2,
+      .why-grid,
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .hero p.subheadline {
+        font-size: 0.95rem;
+      }
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-secondary {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header id="topo">
-    <div class="header-inner">
-      <a href="#topo" class="logo" aria-label="Oceanic Treinamentos - Metalúrgicas (voltar ao topo)">
-        <div class="logo-icon" aria-hidden="true">Ω</div>
-        <div class="logo-text">
-          <span class="logo-name">Oceanic <span>Treinamentos</span></span>
-          <span class="logo-sub">Metalúrgicas</span>
-        </div>
-      </a>
-
-      <nav class="nav" aria-label="Navegação principal">
-        <a href="#problema">Problema</a>
-        <a href="#solucao">Solução</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#conformidade">Conformidade</a>
-        <a href="#planos">Planos</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contato" class="btn-nav">Contato</a>
+<header>
+  <div class="container">
+    <div class="top-bar">
+      <div>
+        <div class="logo">Consultoria Marmoraria ES</div>
+        <div class="tagline">Especialistas em conformidade para empresas de mármore e granito em Cachoeiro/ES</div>
+      </div>
+      <nav>
+        [Problemas](#problemas)
+        [O que fazemos](#servicos)
+        [Como funciona](#como-funciona)
+        [Quem somos](#quem-somos)
+        [FAQ](#faq)
+        [Contato](#contato)
       </nav>
-
-      <button
-        class="menu-btn"
-        id="menuBtn"
-        type="button"
-        aria-expanded="false"
-        aria-controls="navMobile"
-      >
-        <span aria-hidden="true">☰</span>
-        Menu
-      </button>
     </div>
 
-    <div class="nav-mobile" id="navMobile" aria-label="Navegação mobile">
-      <div class="nav-mobile-inner">
-        <a href="#problema">Problema</a>
-        <a href="#solucao">Solução</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#conformidade">Conformidade</a>
-        <a href="#planos">Planos</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contato" class="btn-nav">Contato</a>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero" aria-labelledby="heroTitle">
-    <div class="hero-content">
-      <span class="hero-badge">Treinamentos e NRs com trilhas por função</span>
-      <h1 id="heroTitle">Capacitação essencial para a indústria <span>Metalúrgica</span></h1>
-      <p>
-        Uma página direta ao ponto: cursos organizados por <strong>função</strong>, conformidade e certificados.
-        Menos “treinamento por obrigação”, mais segurança real no chão de fábrica.
-      </p>
-      <div class="hero-btns">
-        <a href="#cursos" class="btn-primary">Ver cursos por função</a>
-        <a href="#contato" class="btn-secondary">Solicitar proposta</a>
-      </div>
-
-      <div class="hero-stats" role="list" aria-label="Destaques">
-        <div class="stat" role="listitem">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Cursos base</div>
-        </div>
-        <div class="stat" role="listitem">
-          <div class="stat-number">Trilhas</div>
-          <div class="stat-label">por função</div>
-        </div>
-        <div class="stat" role="listitem">
-          <div class="stat-number">Certificados</div>
-          <div class="stat-label">e relatórios</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <main id="conteudo">
-    <!-- PROBLEMA -->
-    <section id="problema" class="problema">
-      <div class="container">
-        <span class="section-tag">Desafios do setor</span>
-        <h2 class="section-title">O que normalmente “pega” em metalúrgicas</h2>
-        <p class="section-sub">
-          Riscos mecânicos, elétricos, fumos, ruído, movimentação de cargas e operações críticas. Treinar certo é reduzir acidente,
-          afastamento e perda de produção (e dormir melhor à noite).
-        </p>
-
-        <div class="grid-3">
-          <article class="card-dark">
-            <div class="icon" aria-hidden="true">⚙️</div>
-            <h3>Máquinas e equipamentos</h3>
-            <p>Prensas, tornos, serras e dispositivos de segurança: operação incorreta vira acidente sério em segundos.</p>
-          </article>
-          <article class="card-dark">
-            <div class="icon" aria-hidden="true">🔥</div>
-            <h3>Solda, corte e incêndio</h3>
-            <p>Faísca + inflamável + rotina = combinação clássica. Treinamento reduz incidentes e melhora procedimentos.</p>
-          </article>
-          <article class="card-dark">
-            <div class="icon" aria-hidden="true">⚡</div>
-            <h3>Risco elétrico</h3>
-            <p>Manutenção e painéis elétricos exigem capacitação, procedimentos e disciplina operacional.</p>
-          </article>
-          <article class="card-dark">
-            <div class="icon" aria-hidden="true">🔊</div>
-            <h3>Ruído e fumos metálicos</h3>
-            <p>Perda auditiva e problemas respiratórios são “silenciosos”. Prevenção começa com informação e controle.</p>
-          </article>
-          <article class="card-dark">
-            <div class="icon" aria-hidden="true">🏗️</div>
-            <h3>Movimentação de cargas</h3>
-            <p>Ponte rolante, empilhadeira e içamento: um erro vira queda de carga, esmagamento e dano material.</p>
-          </article>
-          <article class="card-dark">
-            <div class="icon" aria-hidden="true">⚖️</div>
-            <h3>Conformidade e evidências</h3>
-            <p>Sem registro, sem rastreio e sem certificados, a empresa fica vulnerável em auditorias e fiscalizações.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOLUÇÃO -->
-    <section id="solucao" class="solucao">
-      <div class="container">
-        <span class="section-tag">Nossa abordagem</span>
-        <h2 class="section-title">Treinamento do jeito certo: por função e por risco</h2>
-        <p class="section-sub">
-          Em vez de “um pacote único para todo mundo”, organizamos os cursos em trilhas: operador, solda, manutenção, logística, CIPA e brigada.
-          Você treina quem precisa — no que precisa.
-        </p>
-
-        <div class="solucao-content">
-          <div class="solucao-img">
-            <img
-              src="https://images.unsplash.com/photo-1581092918044-f17691642299?w=1200&q=80"
-              alt="Ambiente industrial com operação e segurança"
-              loading="lazy"
-            />
-            <span class="solucao-pill">Trilhas por função</span>
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span>✔</span>
+            <span>Foco total em marmorarias de Cachoeiro/ES</span>
           </div>
+          <h1>Consultoria completa em conformidade para marmorarias de Cachoeiro/ES</h1>
+          
+            Cuidamos de todas as licenças, documentos de segurança do trabalho e obrigações legais para sua marmoraria operar tranquila – sem medo de fiscalização, multas ou ações trabalhistas.
+          
 
-          <div class="solucao-text">
-            <h3>Resultado: segurança, produtividade e evidência documental</h3>
-            <p>
-              Conteúdo prático, linguagem clara, e organização que facilita a gestão. O objetivo não é só “passar no treinamento”,
-              é <strong>mudar comportamento</strong> e <strong>reduzir risco</strong>.
-            </p>
 
-            <ul class="check-list">
-              <li>Seleção rápida de cursos por função (sem chute).</li>
-              <li>Certificados e rastreio de conclusão.</li>
-              <li>Conteúdo alinhado à realidade metalúrgica (máquinas, solda, cargas).</li>
-              <li>Comunicação clara: o que é exigido depende da atividade.</li>
-              <li>Melhor preparo para auditorias e fiscalização.</li>
-            </ul>
-
-            <div style="margin-top:14px;">
-              <a href="#cursos" class="btn-primary">Ver trilhas e cursos</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CURSOS -->
-    <section id="cursos" class="cursos">
-      <div class="container">
-        <span class="section-tag">Cursos</span>
-        <h2 class="section-title">Cursos para Metalúrgicas (filtre por função)</h2>
-        <p class="section-sub">
-          Use os filtros abaixo para ver rapidamente quais cursos fazem sentido para cada função.
-          Clique em um curso para ver conteúdo, público-alvo e recomendações.
-        </p>
-
-        <div class="toolbar" role="region" aria-label="Filtros de cursos">
-          <div class="field">
-            <label for="roleFilter">Filtrar por função</label>
-            <select id="roleFilter">
-              <option value="todos">Mostrar todos</option>
-              <option value="geral">Geral (todos)</option>
-              <option value="operador">Operador de máquinas</option>
-              <option value="solda">Soldagem e corte</option>
-              <option value="eletrica">Manutenção elétrica</option>
-              <option value="mecanica">Manutenção mecânica</option>
-              <option value="logistica">Logística / movimentação de cargas</option>
-              <option value="cipa">CIPA</option>
-              <option value="brigada">Brigada / incêndio</option>
-              <option value="altura">Trabalho em altura</option>
-              <option value="confinado">Espaço confinado</option>
-              <option value="quimicos">Químicos / FISPQ</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="searchFilter">Buscar por nome / NR</label>
-            <input id="searchFilter" type="search" placeholder="Ex.: NR 12, ponte rolante, solda..." />
-          </div>
-        </div>
-
-        <div class="cursos-grid" id="cursosGrid" aria-label="Lista de cursos">
-          <!-- Cards inseridos pelo JS -->
-        </div>
-
-        <div class="cursos-note" role="note">
-          <strong>Nota importante:</strong> “Exigido/por função” depende de atividade, exposição, classificação da área e responsabilidades.
-          Este site organiza e oferece os cursos; a aplicabilidade final deve considerar a realidade da sua operação e documentos de SST.
-        </div>
-      </div>
-    </section>
-
-    <!-- MODAL -->
-    <div
-      id="cursoModal"
-      class="modal-overlay"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modalTitle"
-      aria-describedby="modalDesc"
-    >
-      <div class="modal-box" role="document">
-        <div class="modal-header">
-          <button class="modal-close" id="modalCloseBtn" type="button" aria-label="Fechar detalhes do curso">✕</button>
-          <div class="modal-top">
-            <div class="modal-icon" id="modalIcon" aria-hidden="true">📘</div>
-            <div>
-              <div class="modal-title" id="modalTitle">Título</div>
-              <span class="modal-sub" id="modalSub">Subtítulo</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-body">
-          <div class="modal-badges" id="modalBadges"></div>
-
-          <div class="modal-section">
-            <h4>Descrição</h4>
-            <p id="modalDesc"></p>
-          </div>
-
-          <div class="modal-section">
-            <h4>Conteúdo programático</h4>
-            <ul id="modalConteudo"></ul>
-          </div>
-
-          <div class="modal-meta" aria-label="Informações do curso">
-            <div class="meta-item">
-              <div class="label">Carga horária</div>
-              <div class="value" id="modalCarga"></div>
-            </div>
-            <div class="meta-item">
-              <div class="label">Periodicidade</div>
-              <div class="value" id="modalPeriodicidade"></div>
-            </div>
-            <div class="meta-item meta-wide">
-              <div class="label">Público-alvo</div>
-              <div class="value" id="modalPublico"></div>
-            </div>
-            <div class="meta-item meta-wide">
-              <div class="label">Observação</div>
-              <div class="value" id="modalObs"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <a class="primary" href="#contato" id="modalCta">Solicitar proposta</a>
-          <a class="ghost" href="#cursos" id="modalBack">Voltar para cursos</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- FUNCIONALIDADES -->
-    <section id="funcionalidades" class="funcionalidades">
-      <div class="container">
-        <span class="section-tag">Diferenciais</span>
-        <h2 class="section-title">Feito para facilitar (especialmente no mobile)</h2>
-        <p class="section-sub">
-          Uma página que funciona bem no celular, com navegação mobile, cards acessíveis e modal com teclado (ESC fecha).
-        </p>
-
-        <div class="func-grid">
-          <article class="func-card">
-            <div class="func-icon" aria-hidden="true">🧭</div>
-            <h3>Trilhas por função</h3>
-            <p>Filtre e enxergue rapidamente o que é aplicável para cada perfil do time.</p>
-          </article>
-          <article class="func-card">
-            <div class="func-icon" aria-hidden="true">📄</div>
-            <h3>Evidência e rastreio</h3>
-            <p>Base para certificados e relatórios de conclusão (plataforma/gestão pode ser definida depois).</p>
-          </article>
-          <article class="func-card">
-            <div class="func-icon" aria-hidden="true">⌨️</div>
-            <h3>Acessível de verdade</h3>
-            <p>Cards são botões, modal tem foco controlado e suporte a teclado.</p>
-          </article>
-          <article class="func-card">
-            <div class="func-icon" aria-hidden="true">📱</div>
-            <h3>Mobile-first</h3>
-            <p>Menu mobile e layouts responsivos para não virar “site de desktop espremido”.</p>
-          </article>
-          <article class="func-card">
-            <div class="func-icon" aria-hidden="true">🧯</div>
-            <h3>Conteúdo por risco</h3>
-            <p>Máquinas, solda, inflamáveis, cargas, elétrico: conteúdo no contexto metalúrgico.</p>
-          </article>
-          <article class="func-card">
-            <div class="func-icon" aria-hidden="true">🧰</div>
-            <h3>Personalizável</h3>
-            <p>Estrutura pronta para replicar em outros segmentos mantendo a mesma identidade visual.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONFORMIDADE -->
-    <section id="conformidade" class="conformidade">
-      <div class="container">
-        <span class="section-tag">Conformidade</span>
-        <h2 class="section-title">Matriz de cursos (disponibilidade)</h2>
-        <p class="section-sub">
-          Em vez de afirmar “atendido para todos”, a tabela abaixo mostra cursos <strong>disponíveis</strong> e os cenários típicos de aplicação.
-        </p>
-
-        <div class="conf-table-wrap" role="region" aria-label="Tabela de conformidade" tabindex="0">
-          <table>
-            <thead>
-              <tr>
-                <th>NR / Tema</th>
-                <th>Aplicação típica na metalúrgica</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>NR 01 (GRO/PGR)</td>
-                <td>Gestão de riscos e organização de medidas de prevenção</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 05 (CIPA)</td>
-                <td>Membros da CIPA e gestão de prevenção interna</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 06 (EPI)</td>
-                <td>Orientação e uso correto de EPIs por atividade</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 10 (Eletricidade)</td>
-                <td>Manutenção elétrica / intervenções em instalações e painéis</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 11 (Movimentação de cargas)</td>
-                <td>Empilhadeira, ponte rolante, içamento e armazenamento</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 12 (Máquinas e equipamentos)</td>
-                <td>Operadores e manutenção — operação segura, proteções e procedimentos</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 20 (Inflamáveis e combustíveis)</td>
-                <td>Áreas e atividades com inflamáveis (classificação aplicável)</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 23 (Proteção contra incêndios)</td>
-                <td>Orientação geral + brigada conforme exigências locais</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 33 (Espaço confinado)</td>
-                <td>Trabalhador autorizado, vigia e supervisor (quando aplicável)</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 35 (Trabalho em altura)</td>
-                <td>Atividades acima de 2m (quando aplicável)</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 15 / NR 16</td>
-                <td>Conteúdo de apoio para insalubridade/periculosidade (conforme exposição)</td>
-                <td><span class="status status-opcional">Por cenário</span></td>
-              </tr>
-              <tr>
-                <td>NR 26 (GHS/FISPQ)</td>
-                <td>Químicos: óleos, solventes, tintas, gases, limpeza e rotulagem</td>
-                <td><span class="status status-disponivel">Disponível</span></td>
-              </tr>
-              <tr>
-                <td>NR 13 (Caldeiras/vasos)</td>
-                <td>Quando a planta possui caldeiras/vasos/tubulações enquadradas</td>
-                <td><span class="status status-opcional">Por cenário</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="conf-note">
-          <strong>Aplicabilidade varia</strong> conforme atividades, exposições, classificação de áreas e requisitos locais.
-          O objetivo aqui é organizar a oferta de cursos com transparência.
-        </p>
-      </div>
-    </section>
-
-    <!-- DEPOIMENTOS -->
-    <section id="depoimentos" class="depoimentos">
-      <div class="container">
-        <span class="section-tag">Prova social</span>
-        <h2 class="section-title">O que empresas do setor relatam</h2>
-        <p class="section-sub">Textos de exemplo (substitua pelos seus depoimentos reais quando tiver).</p>
-
-        <div class="dep-grid">
-          <article class="dep-card">
-            <div class="dep-stars" aria-label="5 estrelas">★★★★★</div>
-            <p>“A trilha por função ajudou a parar de treinar todo mundo com tudo. O time entendeu melhor e a gestão ficou mais simples.”</p>
-            <div class="dep-author">
-              <div class="dep-avatar" aria-hidden="true">J.S.</div>
-              <div>
-                <div class="dep-name">João S.</div>
-                <div class="dep-role">Produção — Metalúrgica</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="dep-card">
-            <div class="dep-stars" aria-label="5 estrelas">★★★★★</div>
-            <p>“NR 12 com exemplos do nosso dia a dia fez diferença. O pessoal finalmente parou de ‘dar jeitinho’ em proteção.”</p>
-            <div class="dep-author">
-              <div class="dep-avatar" aria-hidden="true">M.C.</div>
-              <div>
-                <div class="dep-name">Maria C.</div>
-                <div class="dep-role">SST — Indústria</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="dep-card">
-            <div class="dep-stars" aria-label="5 estrelas">★★★★★</div>
-            <p>“A página funciona bem no celular, e isso aumentou o engajamento. Menos desculpa de ‘não consigo acessar’.”</p>
-            <div class="dep-author">
-              <div class="dep-avatar" aria-hidden="true">P.R.</div>
-              <div>
-                <div class="dep-name">Pedro R.</div>
-                <div class="dep-role">RH — Metalúrgica</div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PLANOS -->
-    <section id="planos" class="planos">
-      <div class="container">
-        <span class="section-tag">Planos</span>
-        <h2 class="section-title">Modelos de contratação</h2>
-        <p class="section-sub">
-          Valores variam por quantidade de colaboradores, trilhas e personalizações. Para não deixar “R$ /mês” vazio,
-          aqui vai uma estrutura clara com <strong>preço sob consulta</strong>.
-        </p>
-
-        <div class="planos-grid">
-          <article class="plano-card">
-            <div class="plano-nome">Start</div>
-            <div class="plano-preco">Sob consulta</div>
-            <p class="plano-desc">Para começar com trilhas essenciais e organização do básico.</p>
-            <ul class="plano-lista">
-              <li><span class="ok">✓</span> Trilhas: Geral + Operação</li>
-              <li><span class="ok">✓</span> Certificados digitais</li>
-              <li><span class="ok">✓</span> Suporte padrão</li>
-              <li><span class="no">✕</span> Conteúdo personalizado</li>
-            </ul>
-            <a class="btn-plano outline" href="#contato">Pedir proposta</a>
-          </article>
-
-          <article class="plano-card destaque">
-            <span class="plano-badge">Mais escolhido</span>
-            <div class="plano-nome">Essencial</div>
-            <div class="plano-preco">Sob consulta</div>
-            <p class="plano-desc">Equilíbrio entre cobertura de NRs e gestão por função.</p>
-            <ul class="plano-lista">
-              <li><span class="ok">✓</span> Trilhas: Geral + Operação + Solda + Logística</li>
-              <li><span class="ok">✓</span> Certificados + relatórios</li>
-              <li><span class="ok">✓</span> Suporte prioritário</li>
-              <li><span class="no">✕</span> Integrações avançadas</li>
-            </ul>
-            <a class="btn-plano solid" href="#contato">Quero esse</a>
-          </article>
-
-          <article class="plano-card">
-            <div class="plano-nome">Enterprise</div>
-            <div class="plano-preco">Sob consulta</div>
-            <p class="plano-desc">Para grandes plantas e necessidades específicas.</p>
-            <ul class="plano-lista">
-              <li><span class="ok">✓</span> Todas as trilhas + módulos por máquina</li>
-              <li><span class="ok">✓</span> Personalização de conteúdo</li>
-              <li><span class="ok">✓</span> Suporte dedicado</li>
-              <li><span class="ok">✓</span> Consultoria e implantação</li>
-            </ul>
-            <a class="btn-plano outline" href="#contato">Conversar</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="faq">
-      <div class="container">
-        <span class="section-tag">FAQ</span>
-        <h2 class="section-title">Dúvidas frequentes</h2>
-        <p class="section-sub">Respostas objetivas para não virar “reunião que poderia ser e-mail”.</p>
-
-        <div class="faq-list" aria-label="Perguntas frequentes">
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              Esses cursos são obrigatórios para todos os funcionários?
-              <span class="faq-arrow" aria-hidden="true">▼</span>
+          <div class="hero-ctas">
+            <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'});">
+              Quero um diagnóstico gratuito da minha marmoraria
             </button>
-            <div class="faq-answer">
-              <p>
-                Nem sempre. Muitos treinamentos dependem da <strong>função</strong> e da <strong>atividade/exposição</strong> (ex.: altura, espaço confinado, inflamáveis).
-                Aqui você vê a organização por trilhas; a aplicabilidade final depende da realidade da operação.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              No celular funciona bem?
-              <span class="faq-arrow" aria-hidden="true">▼</span>
+            <button class="btn-secondary" onclick="document.getElementById('como-funciona').scrollIntoView({behavior:'smooth'});">
+              Entender como funciona
             </button>
-            <div class="faq-answer">
-              <p>
-                Sim. A página tem menu mobile, botões grandes, modal acessível e layout responsivo. Dá para navegar e filtrar cursos sem sofrimento.
-              </p>
-            </div>
           </div>
+          
+            Atendemos exclusivamente empresas de mármore e granito. Fale com engenheiros especialistas no seu ramo.
+          
 
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              O modal de curso é acessível (teclado)?
-              <span class="faq-arrow" aria-hidden="true">▼</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Sim. Ao abrir um curso, o foco vai para o modal; você fecha com <strong>ESC</strong> e o foco retorna para o card.
-                (Isso também é ótimo para usuários em notebooks e para acessibilidade.)
-              </p>
-            </div>
-          </div>
 
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              Posso replicar para outros segmentos mantendo a mesma identidade visual?
-              <span class="faq-arrow" aria-hidden="true">▼</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Sim. Esta página foi estruturada para trocar conteúdo (cursos, tabela e textos) sem mexer na identidade visual.
-              </p>
-            </div>
+        </div>
+        <div>
+          <div class="hero-card">
+            <h3>Em quais frentes cuidamos da sua marmoraria:</h3>
+            <ul>
+              <li><span>•</span> Licenças ambientais do IEMA (LO, LI, resíduos e água)</li>
+              <li><span>•</span> AVCB e projeto de incêndio junto ao CBMES</li>
+              <li><span>•</span> Alvará e exigências da Prefeitura de Cachoeiro</li>
+              <li><span>•</span> PGR, PCMSO, laudos, LTCAT, PPP e eSocial</li>
+              <li><span>•</span> Treinamentos NR‑10, NR‑11, NR‑12, NR‑18, NR‑35 e outros para sua equipe</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="cta-final">
-      <div class="container">
-        <h2>Solicitar proposta para sua metalúrgica</h2>
-        <p>
-          Preencha os dados e descreva rapidamente sua operação (quantas pessoas, funções e quais atividades críticas).
-          Sem enrolação — quanto mais claro, mais rápida a proposta.
-        </p>
+  </div>
+</header>
 
-        <div class="contact-card" role="form" aria-label="Formulário de contato (exemplo)">
-          <form id="contactForm">
-            <div class="contact-grid">
-              <div>
-                <label for="nome">Nome</label>
-                <input id="nome" name="nome" autocomplete="name" required />
-              </div>
-              <div>
-                <label for="empresa">Empresa</label>
-                <input id="empresa" name="empresa" autocomplete="organization" required />
-              </div>
-              <div>
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-              </div>
-              <div>
-                <label for="telefone">Telefone / WhatsApp</label>
-                <input id="telefone" name="telefone" autocomplete="tel" />
-              </div>
-              <div class="full">
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Ex.: 35 colaboradores. Funções: operador, solda, manutenção, logística. Temos ponte rolante e gases para solda. Precisamos organizar trilhas e certificados."></textarea>
-              </div>
-            </div>
+<main>
+  <div class="container">
 
-            <div class="contact-actions">
-              <button class="btn-primary" type="submit">Gerar mensagem (copiar)</button>
-              <a class="btn-secondary" href="#cursos">Voltar aos cursos</a>
-            </div>
+    <!-- Seção Problemas -->
+    <section id="problemas">
+      <h2 class="section-title">Sua marmoraria está operando no risco sem você perceber?</h2>
+      
+        Se você é dono de marmoraria em Cachoeiro, provavelmente convive com pelo menos um desses cenários:
+      
 
-            <p class="contact-hint">
-              Este formulário não envia automaticamente (sem backend). Ao clicar, ele gera uma mensagem pronta para você copiar e enviar por e-mail/WhatsApp.
-            </p>
 
-            <div class="sr-only" aria-live="polite" id="formLive"></div>
-          </form>
-        </div>
+      <ul class="problem-list">
+        <li>Licença ambiental (IEMA) vencendo e ninguém acompanhando.</li>
+        <li>AVCB do Corpo de Bombeiros atrasado ou inexistente.</li>
+        <li>PGR, PCMSO e laudos de insalubridade desatualizados.</li>
+        <li>Funcionários cortando, polindo e instalando sem os treinamentos obrigatórios.</li>
+        <li>Falta de LTCAT e PPP bem feitos, abrindo espaço para aposentadoria especial e ações trabalhistas.</li>
+        <li>Medo de fiscalização surpresa, multa, interdição ou processo de ex-funcionário.</li>
+      </ul>
+      <div class="highlight-box">
+        O problema não é só a multa: um único acidente grave com chapa ou instalação em altura pode parar sua produção, sujar o nome da empresa e gerar um passivo que dura anos.
       </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>
-        &copy; 2026 Oceanic Treinamentos — Metalúrgicas. |
-        <a href="#topo">Voltar ao topo</a>
-      </p>
-    </div>
-  </footer>
+    <!-- Seção Serviços -->
+    <section id="servicos">
+      <h2 class="section-title">Nós assumimos o controle da sua conformidade legal – fim da bagunça de papelada</h2>
+      
+        Somos engenheiros especialistas em marmorarias e cuidamos do pacote completo de conformidade para você:
+      
 
-  <script>
-    /* =========================
-       DATA: cursos (com trilhas)
-       ========================= */
-    const cursos = [
-      {
-        id: "nr01",
-        icon: "👷",
-        nr: "NR 01",
-        title: "GRO e PGR",
-        subtitle: "Gestão de Riscos Ocupacionais",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["geral", "operador", "solda", "eletrica", "mecanica", "logistica", "cipa", "brigada", "altura", "confinado", "quimicos"],
-        desc: "Base de gestão de riscos e organização do PGR. É o “mapa” que orienta medidas e treinamentos conforme riscos reais.",
-        conteudo: [
-          "Conceitos do GRO e PGR",
-          "Identificação de perigos e avaliação de riscos",
-          "Hierarquia de controles (EPC/EPI/administrativos)",
-          "Plano de ação e monitoramento",
-          "Responsabilidades e evidências"
-        ],
-        carga: "4h",
-        periodicidade: "Admissional e atualização conforme mudanças",
-        publico: "Gestores, supervisores, SST e colaboradores",
-        obs: "Aplicabilidade geral; desdobramento por função melhora efetividade."
-      },
-      {
-        id: "nr06",
-        icon: "🧤",
-        nr: "NR 06",
-        title: "EPI",
-        subtitle: "Uso, conservação e responsabilidade",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["geral", "operador", "solda", "eletrica", "mecanica", "logistica", "altura", "confinado", "quimicos"],
-        desc: "Seleção e uso correto de EPIs por atividade (corte, solda, ruído, fumos, químicos).",
-        conteudo: [
-          "Tipos de EPIs comuns na metalúrgica",
-          "Ajuste, inspeção e limitações",
-          "Higienização e armazenamento",
-          "Troca, registro e responsabilidades"
-        ],
-        carga: "3h",
-        periodicidade: "Anual (ou conforme procedimento interno)",
-        publico: "Todos os colaboradores expostos a risco",
-        obs: "Recomendado com exemplos reais do seu chão de fábrica."
-      },
-      {
-        id: "nr12",
-        icon: "⚙️",
-        nr: "NR 12",
-        title: "Máquinas e Equipamentos",
-        subtitle: "Operação segura e proteções",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["operador", "mecanica", "geral"],
-        desc: "Para operação e interação segura com máquinas: prensas, tornos, serras, guilhotinas, dobradeiras etc.",
-        conteudo: [
-          "Riscos mecânicos e pontos de esmagamento/corte",
-          "Proteções, intertravamentos e parada de emergência",
-          "Procedimentos operacionais seguros",
-          "Regras para ajustes e limpeza",
-          "Noções de bloqueio/etiquetagem para intervenções"
-        ],
-        carga: "8h",
-        periodicidade: "Admissional + reciclagem conforme mudança de máquina/processo",
-        publico: "Operadores, set-up, supervisores e manutenção",
-        obs: "Ideal organizar módulos por tipo de máquina do parque fabril."
-      },
-      {
-        id: "nr10",
-        icon: "⚡",
-        nr: "NR 10",
-        title: "Segurança em Eletricidade",
-        subtitle: "Manutenção e riscos elétricos",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["eletrica", "geral"],
-        desc: "Fundamentos de segurança para intervenções em instalações e serviços com eletricidade.",
-        conteudo: [
-          "Riscos: choque, arco elétrico e queimaduras",
-          "Medidas de controle e procedimentos",
-          "EPI/EPC e ferramentas isoladas",
-          "Sinalização e zonas de risco",
-          "Conceitos de bloqueio e liberação segura"
-        ],
-        carga: "8h",
-        periodicidade: "Conforme exigência e reciclagens aplicáveis",
-        publico: "Eletricistas, manutenção e pessoas autorizadas",
-        obs: "Escopo exato depende do tipo de atividade e nível de exposição."
-      },
-      {
-        id: "nr11",
-        icon: "🏗️",
-        nr: "NR 11",
-        title: "Movimentação de Cargas",
-        subtitle: "Empilhadeira, ponte rolante, içamento",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["logistica", "geral"],
-        desc: "Boas práticas e segurança na movimentação, armazenamento e içamento de cargas metálicas.",
-        conteudo: [
-          "Riscos: esmagamento, queda de carga, colisões",
-          "Inspeção pré-operacional e rotinas",
-          "Sinalização e comunicação durante içamentos",
-          "Armazenamento seguro e circulação",
-          "Condutas e responsabilidades"
-        ],
-        carga: "8h",
-        periodicidade: "Admissional + reciclagem conforme procedimento",
-        publico: "Logística, operadores e auxiliares de movimentação",
-        obs: "Para operação de equipamentos específicos, pode haver requisitos adicionais."
-      },
-      {
-        id: "solda",
-        icon: "🔥",
-        nr: "Boas práticas",
-        title: "Segurança em Soldagem e Corte",
-        subtitle: "MIG/MAG, TIG, eletrodo, oxicorte/plasma",
-        tag: { type: "recomendado", text: "Recomendado" },
-        roles: ["solda", "geral", "brigada", "quimicos"],
-        desc: "Riscos de fumos metálicos, radiação, queimaduras, choque e incêndio; EPIs/EPCs e organização da área.",
-        conteudo: [
-          "Fumos metálicos e ventilação/exaustão",
-          "Radiação e proteção ocular/facial",
-          "Manuseio de cilindros e gases",
-          "Prevenção de incêndio na área de solda",
-          "Organização, limpeza e isolamento"
-        ],
-        carga: "6h",
-        periodicidade: "Anual (recomendado) ou conforme procedimento",
-        publico: "Soldadores, ajudantes, supervisores e manutenção",
-        obs: "Ótimo para reduzir incidentes e padronizar o setor."
-      },
-      {
-        id: "nr20",
-        icon: "⛽",
-        nr: "NR 20",
-        title: "Inflamáveis e Combustíveis",
-        subtitle: "Armazenamento e manuseio seguro",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["solda", "quimicos", "geral"],
-        desc: "Conteúdo para atividades com inflamáveis (gases, solventes, óleos). Aplicabilidade depende da classificação da instalação.",
-        conteudo: [
-          "Conceitos e riscos (incêndio/explosão)",
-          "Armazenamento e ventilação",
-          "Fontes de ignição e controle",
-          "Procedimentos e emergências",
-          "EPI/EPC e sinalização"
-        ],
-        carga: "6h",
-        periodicidade: "Conforme classificação e procedimento",
-        publico: "Solda, manutenção, almoxarifado e áreas com inflamáveis",
-        obs: "A exigência formal depende da classificação NR 20 aplicável."
-      },
-      {
-        id: "nr23",
-        icon: "🧯",
-        nr: "NR 23",
-        title: "Prevenção e Combate a Incêndio",
-        subtitle: "Orientação + brigada (quando aplicável)",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["geral", "brigada", "solda"],
-        desc: "Prevenção, classes de fogo, uso de extintores e rotas. Brigada conforme requisitos locais.",
-        conteudo: [
-          "Classes de fogo e agentes extintores",
-          "Inspeção visual e conduta preventiva",
-          "Rotas de fuga e ponto de encontro",
-          "Ação inicial com segurança",
-          "Brigada: papéis e prática (se aplicável)"
-        ],
-        carga: "6h",
-        periodicidade: "Anual (recomendado) / conforme exigência local",
-        publico: "Todos (orientação) e brigadistas (módulo adicional)",
-        obs: "Brigada e carga horária variam por exigências do Corpo de Bombeiros local."
-      },
-      {
-        id: "nr33",
-        icon: "🕳️",
-        nr: "NR 33",
-        title: "Espaço Confinado",
-        subtitle: "Autorizado, Vigia e Supervisor",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["confinado"],
-        desc: "Conteúdo para trabalho seguro em espaços confinados: PET, monitoramento atmosférico e resgate.",
-        conteudo: [
-          "Definição e reconhecimento de espaço confinado",
-          "Riscos atmosféricos e mecânicos",
-          "PET e procedimentos de entrada",
-          "Monitoramento e ventilação",
-          "Plano de emergência e resgate"
-        ],
-        carga: "8h",
-        periodicidade: "Conforme exigência aplicável",
-        publico: "Trabalhador autorizado, vigia, supervisor de entrada",
-        obs: "Somente quando a atividade existir na planta."
-      },
-      {
-        id: "nr35",
-        icon: "🪜",
-        nr: "NR 35",
-        title: "Trabalho em Altura",
-        subtitle: "Acima de 2m (quando aplicável)",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["altura"],
-        desc: "Planejamento, EPI, sistemas de ancoragem e resgate para atividades em altura.",
-        conteudo: [
-          "Análise de risco e condições impeditivas",
-          "EPI (cinturão, talabarte) e inspeção",
-          "Ancoragem e linhas de vida (conceitos)",
-          "Procedimentos e resgate",
-          "Conduta e documentação"
-        ],
-        carga: "8h",
-        periodicidade: "Conforme exigência aplicável",
-        publico: "Manutenção, montagem e atividades em altura",
-        obs: "Somente quando houver trabalho em altura."
-      },
-      {
-        id: "nr05",
-        icon: "🗳️",
-        nr: "NR 05",
-        title: "CIPA",
-        subtitle: "Formação de membros",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["cipa"],
-        desc: "Funções, rotinas e responsabilidades da CIPA com foco em riscos típicos de metalúrgicas.",
-        conteudo: [
-          "Atribuições e organização da CIPA",
-          "Mapa de riscos e inspeções",
-          "Investigação de incidentes",
-          "Campanhas e comunicação interna",
-          "Atas, plano de ação e acompanhamento"
-        ],
-        carga: "20h",
-        periodicidade: "Conforme gestão da CIPA",
-        publico: "Membros titulares e suplentes",
-        obs: "Estrutura e carga podem variar conforme enquadramento."
-      },
-      {
-        id: "primeiros",
-        icon: "🩹",
-        nr: "Boas práticas",
-        title: "Primeiros Socorros",
-        subtitle: "Atendimento inicial em acidentes",
-        tag: { type: "recomendado", text: "Recomendado" },
-        roles: ["geral", "brigada", "operador", "solda", "logistica"],
-        desc: "Resposta inicial em cortes, queimaduras, esmagamentos, choque elétrico e quedas, com segurança do socorrista.",
-        conteudo: [
-          "Avaliação da cena e acionamento de emergência",
-          "Controle de hemorragia e ferimentos",
-          "Queimaduras e cuidados iniciais",
-          "Choque elétrico: condutas seguras",
-          "Imobilizações e transporte básico (conceitos)"
-        ],
-        carga: "6h",
-        periodicidade: "Anual (recomendado)",
-        publico: "Líderes, brigadistas e equipes de referência",
-        obs: "Recomendado especialmente para turnos e áreas críticas."
-      },
-      {
-        id: "nr26",
-        icon: "🧪",
-        nr: "NR 26 / GHS",
-        title: "Químicos e FISPQ",
-        subtitle: "Rotulagem, armazenamento e manuseio",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["quimicos", "geral", "solda"],
-        desc: "Leitura de FISPQ, rotulagem GHS e práticas seguras com óleos, solventes, tintas, limpeza e gases.",
-        conteudo: [
-          "Simbologia GHS e leitura de rótulos",
-          "FISPQ: seções essenciais e riscos",
-          "Armazenamento e incompatibilidades",
-          "Derramamento e emergência (conceitos)",
-          "EPI/EPC e higiene ocupacional básica"
-        ],
-        carga: "4h",
-        periodicidade: "Anual (recomendado) ou conforme procedimento",
-        publico: "Almoxarifado, produção e manutenção com químicos",
-        obs: "Excelente para reduzir incidentes com produtos e rotulagem."
-      },
-      {
-        id: "nr15",
-        icon: "🔊",
-        nr: "NR 15",
-        title: "Insalubridade (conteúdo de apoio)",
-        subtitle: "Ruído, calor, fumos e poeiras",
-        tag: { type: "recomendado", text: "Recomendado" },
-        roles: ["geral", "operador", "solda"],
-        desc: "Compreensão de agentes e prevenção: ruído, calor, fumos, poeiras e controles.",
-        conteudo: [
-          "Agentes físicos e químicos (visão geral)",
-          "Ruído e conservação auditiva (conceitos)",
-          "Ventilação/exaustão e proteção respiratória",
-          "Boas práticas e higiene",
-          "Sinais precoces de adoecimento"
-        ],
-        carga: "4h",
-        periodicidade: "Anual (recomendado)",
-        publico: "Equipes expostas (conforme avaliação)",
-        obs: "Conteúdo educativo; avaliações formais seguem critérios técnicos do SST."
-      },
-      {
-        id: "nr16",
-        icon: "⚠️",
-        nr: "NR 16",
-        title: "Periculosidade (conteúdo de apoio)",
-        subtitle: "Inflamáveis e risco acentuado",
-        tag: { type: "recomendado", text: "Recomendado" },
-        roles: ["geral", "solda", "quimicos"],
-        desc: "Compreensão de risco acentuado e condutas preventivas em cenários perigosos.",
-        conteudo: [
-          "Noções de atividades perigosas",
-          "Inflamáveis e fontes de ignição",
-          "Condutas seguras e organização",
-          "Sinalização e procedimentos",
-          "Cultura de prevenção"
-        ],
-        carga: "4h",
-        periodicidade: "Anual (recomendado)",
-        publico: "Áreas com risco acentuado (quando aplicável)",
-        obs: "Conteúdo educativo; enquadramento formal depende de avaliação técnica."
-      },
-      {
-        id: "nr13",
-        icon: "🛢️",
-        nr: "NR 13",
-        title: "Caldeiras e Vasos (quando aplicável)",
-        subtitle: "Noções e condutas de segurança",
-        tag: { type: "funcao", text: "Por função" },
-        roles: ["mecanica", "geral"],
-        desc: "Conteúdo introdutório para unidades com vasos, caldeiras ou tubulações enquadradas.",
-        conteudo: [
-          "Riscos de pressão e integridade",
-          "Sinais de anormalidade e condutas",
-          "Rotinas e registros (conceitos)",
-          "Isolamento e permissões (visão geral)",
-          "Emergência e comunicação"
-        ],
-        carga: "4h",
-        periodicidade: "Conforme aplicabilidade",
-        publico: "Manutenção e operação em áreas com equipamentos sob pressão",
-        obs: "Somente se a planta tiver equipamentos enquadrados."
-      }
-    ];
 
-    /* =========================
-       RENDER cursos
-       ========================= */
-    const cursosGrid = document.getElementById("cursosGrid");
-    const roleFilter = document.getElementById("roleFilter");
-    const searchFilter = document.getElementById("searchFilter");
 
-    function badgeHtml(c) {
-      const badges = [];
-      badges.push(`<span class="badge badge-nr">${escapeHtml(c.nr)}</span>`);
-      if (c.tag?.type === "funcao") badges.push(`<span class="badge badge-funcao">${escapeHtml(c.tag.text)}</span>`);
-      if (c.tag?.type === "recomendado") badges.push(`<span class="badge badge-recomendado">${escapeHtml(c.tag.text)}</span>`);
-      return badges.join("");
-    }
+      <div class="grid-2" style="margin-top: 16px;">
+        <div class="card">
+          <h3>Bloco 1 – Licenças e documentos para funcionar</h3>
+          <ul>
+            <li><strong>IEMA (Ambiental – ES)</strong>: LO, LI quando necessário, cadastro de gerador, plano e destinação da lama de corte e resíduos.</li>
+            <li><strong>Corpo de Bombeiros (CBMES)</strong>: projeto de prevenção, emissão e renovação do AVCB, brigada de incêndio e plano de emergência.</li>
+            <li><strong>Prefeitura de Cachoeiro</strong>: alvará de funcionamento, Habite-se (quando aplicável) e verificação de zoneamento/uso do solo.</li>
+          </ul>
+        </div>
 
-    function renderCursos() {
-      const role = roleFilter.value;
-      const query = (searchFilter.value || "").trim().toLowerCase();
+        <div class="card">
+          <h3>Bloco 2 – Segurança e Saúde do Trabalho (SST)</h3>
+          <ul>
+            <li>Elaboração e atualização de PGR e PCMSO.</li>
+            <li>Laudos de insalubridade e periculosidade.</li>
+            <li>LTCAT e organização de PPP para todos os empregados.</li>
+            <li>Fichas de EPI, ordens de serviço, plano de emergência.</li>
+            <li>Gestão de todos os treinamentos obrigatórios (NR‑10, NR‑11, NR‑12, NR‑18, NR‑23, NR‑26, NR‑35 etc.).</li>
+          </ul>
+        </div>
+      </div>
 
-      const filtered = cursos.filter(c => {
-        const roleOk = (role === "todos") || (c.roles || []).includes(role);
-        const text = `${c.nr} ${c.title} ${c.subtitle} ${c.desc}`.toLowerCase();
-        const queryOk = !query || text.includes(query);
-        return roleOk && queryOk;
-      });
+      <div class="card" style="margin-top: 20px;">
+        <h3>Bloco 3 – Funcionários em dia com a lei</h3>
+        <ul>
+          <li>Mapeamos todas as funções da sua marmoraria (cortador, polidor, instalador, motorista, operador de ponte rolante, eletricista, auxiliar, administrativo etc.).</li>
+          <li>Definimos, com base na legislação, quais cursos e treinamentos cada função precisa ter.</li>
+          <li>Conferimos quem está em dia, quem está vencido e quem nunca foi treinado.</li>
+          <li>Montamos um plano anual de treinamentos específico para sua equipe.</li>
+        </ul>
+      </div>
+    </section>
 
-      cursosGrid.innerHTML = filtered.map(c => `
-        <button
-          class="curso-card"
-          type="button"
-          data-curso-id="${c.id}"
-          data-roles="${(c.roles || []).join(",")}"
-          aria-label="Abrir detalhes do curso ${escapeHtml(c.nr)} ${escapeHtml(c.title)}"
-        >
-          <div class="badges">${badgeHtml(c)}</div>
+    <!-- Seção Como funciona -->
+    <section id="como-funciona">
+      <h2 class="section-title">Como é o passo a passo da nossa consultoria para sua marmoraria</h2>
+      <ul class="step-list">
+        <li class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Diagnóstico in loco</h3>
+            
+              Vamos até sua marmoraria em Cachoeiro e aplicamos um check-list completo: licenças (IEMA, CBMES, Prefeitura), documentos de SST (PGR, PCMSO, laudos, PPP, LTCAT), situação dos treinamentos e principais riscos legais e operacionais.
+            
 
-          <div class="curso-header">
-            <div class="curso-icon-wrap" aria-hidden="true">${escapeHtml(c.icon)}</div>
-            <div class="curso-header-text">
-              <h3>${escapeHtml(c.nr)} — ${escapeHtml(c.title)}</h3>
-              <span>${escapeHtml(c.subtitle)}</span>
-            </div>
+
           </div>
+        </li>
+        <li class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Relatório de risco e plano de ação</h3>
+            
+              Você recebe um Relatório de Conformidade da Marmoraria, mostrando o que está em dia, o que está vencido, o que não existe mas é obrigatório, e as prioridades de correção.
+            
 
-          <div class="curso-body">
-            <p>${escapeHtml(c.desc)}</p>
-            <div class="curso-meta" aria-label="Informações rápidas">
-              <span>⏱️ ${escapeHtml(c.carga)}</span>
-              <span>🔁 ${escapeHtml(c.periodicidade)}</span>
-            </div>
+
           </div>
+        </li>
+        <li class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Execução das correções</h3>
+            
+              Cuidamos de elaborar/atualizar programas e laudos, organizar e ministrar treinamentos, preparar a documentação para licenças ambientais e AVCB e acompanhar as etapas até a regularização.
+            
 
-          <div class="curso-cta">Ver detalhes</div>
-        </button>
-      `).join("");
 
-      // Empty state
-      if (!filtered.length) {
-        cursosGrid.innerHTML = `
-          <div class="card-dark" style="grid-column: 1 / -1; background: rgba(10,31,60,0.06); color: #0a1f3c;">
-            <h3 style="color: #0a1f3c; margin-bottom: 8px; font-weight: 950;">Nada encontrado</h3>
-            <p style="color: #546e7a;">Tente trocar a função ou ajustar a busca.</p>
           </div>
-        `;
-      }
-    }
+        </li>
+        <li class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Monitoramento contínuo</h3>
+            
+              Controlamos vencimentos de licenças, treinamentos e documentos. Avisamos com antecedência o que precisa ser renovado e mantemos sua marmoraria protegida o ano inteiro.
+            
 
-    function escapeHtml(str) {
-      return String(str)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
 
-    roleFilter.addEventListener("change", renderCursos);
-    searchFilter.addEventListener("input", renderCursos);
-    renderCursos();
-
-    /* =========================
-       MODAL: acessível (ESC + focus trap + return focus)
-       ========================= */
-    const modalOverlay = document.getElementById("cursoModal");
-    const modalCloseBtn = document.getElementById("modalCloseBtn");
-    const modalIcon = document.getElementById("modalIcon");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalSub = document.getElementById("modalSub");
-    const modalDesc = document.getElementById("modalDesc");
-    const modalConteudo = document.getElementById("modalConteudo");
-    const modalCarga = document.getElementById("modalCarga");
-    const modalPeriodicidade = document.getElementById("modalPeriodicidade");
-    const modalPublico = document.getElementById("modalPublico");
-    const modalObs = document.getElementById("modalObs");
-    const modalBadges = document.getElementById("modalBadges");
-
-    let lastFocusedElement = null;
-
-    function openModal(cursoId) {
-      const c = cursos.find(x => x.id === cursoId);
-      if (!c) return;
-
-      lastFocusedElement = document.activeElement;
-
-      modalIcon.textContent = c.icon;
-      modalTitle.textContent = `${c.nr} — ${c.title}`;
-      modalSub.textContent = c.subtitle;
-      modalDesc.textContent = c.desc;
-
-      modalBadges.innerHTML = `
-        <span class="badge badge-nr">${escapeHtml(c.nr)}</span>
-        ${c.tag?.type === "funcao" ? `<span class="badge badge-funcao">${escapeHtml(c.tag.text)}</span>` : ""}
-        ${c.tag?.type === "recomendado" ? `<span class="badge badge-recomendado">${escapeHtml(c.tag.text)}</span>` : ""}
-      `;
-
-      modalConteudo.innerHTML = "";
-      (c.conteudo || []).forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        modalConteudo.appendChild(li);
-      });
-
-      modalCarga.textContent = c.carga;
-      modalPeriodicidade.textContent = c.periodicidade;
-      modalPublico.textContent = c.publico;
-      modalObs.textContent = c.obs || "—";
-
-      modalOverlay.classList.add("open");
-      document.body.style.overflow = "hidden";
-
-      // Hide background for screen readers / disable interaction
-      const main = document.querySelector("main");
-      const header = document.querySelector("header");
-      const footer = document.querySelector("footer");
-      [main, header, footer].forEach(el => {
-        if (!el) return;
-        el.setAttribute("aria-hidden", "true");
-        el.inert = true;
-      });
-
-      // Focus modal
-      modalCloseBtn.focus();
-    }
-
-    function closeModal() {
-      modalOverlay.classList.remove("open");
-      document.body.style.overflow = "";
-
-      // Restore background
-      const main = document.querySelector("main");
-      const header = document.querySelector("header");
-      const footer = document.querySelector("footer");
-      [main, header, footer].forEach(el => {
-        if (!el) return;
-        el.removeAttribute("aria-hidden");
-        el.inert = false;
-      });
-
-      if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
-        lastFocusedElement.focus();
-      }
-    }
-
-    // Click outside closes
-    modalOverlay.addEventListener("click", (e) => {
-      if (e.target === modalOverlay) closeModal();
-    });
-    modalCloseBtn.addEventListener("click", closeModal);
-
-    // ESC closes
-    document.addEventListener("keydown", (e) => {
-      if (!modalOverlay.classList.contains("open")) return;
-      if (e.key === "Escape") closeModal();
-    });
-
-    // Focus trap
-    document.addEventListener("keydown", (e) => {
-      if (!modalOverlay.classList.contains("open")) return;
-      if (e.key !== "Tab") return;
-
-      const focusable = modalOverlay.querySelectorAll(
-        'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      if (!focusable.length) return;
-
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    });
-
-    // Open modal by clicking course cards (event delegation)
-    cursosGrid.addEventListener("click", (e) => {
-      const btn = e.target.closest(".curso-card");
-      if (!btn) return;
-      openModal(btn.dataset.cursoId);
-    });
-
-    /* =========================
-       FAQ accordion (A11y)
-       ========================= */
-    document.querySelectorAll(".faq-item").forEach(item => {
-      const btn = item.querySelector(".faq-question");
-      const ans = item.querySelector(".faq-answer");
-      btn.addEventListener("click", () => {
-        const isOpen = item.classList.contains("active");
-        document.querySelectorAll(".faq-item").forEach(it => {
-          it.classList.remove("active");
-          it.querySelector(".faq-answer").classList.remove("open");
-          it.querySelector(".faq-question").setAttribute("aria-expanded", "false");
-        });
-        if (!isOpen) {
-          item.classList.add("active");
-          ans.classList.add("open");
-          btn.setAttribute("aria-expanded", "true");
-        }
-      });
-    });
-
-    /* =========================
-       Mobile menu
-       ========================= */
-    const menuBtn = document.getElementById("menuBtn");
-    const navMobile = document.getElementById("navMobile");
-
-    function closeMobileMenu() {
-      navMobile.classList.remove("open");
-      menuBtn.setAttribute("aria-expanded", "false");
-    }
-    function toggleMobileMenu() {
-      const open = navMobile.classList.toggle("open");
-      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    }
-    menuBtn.addEventListener("click", toggleMobileMenu);
-
-    // Close menu on navigation click
-    navMobile.addEventListener("click", (e) => {
-      const link = e.target.closest("a[href^='#']");
-      if (link) closeMobileMenu();
-    });
-
-    /* =========================
-       Smooth scroll (safe)
-       ========================= */
-    document.querySelectorAll("a[href^='#']").forEach(a => {
-      a.addEventListener("click", (e) => {
-        const id = a.getAttribute("href");
-        const target = document.querySelector(id);
-        if (!target) return;
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    });
-
-    /* =========================
-       Header shadow on scroll
-       ========================= */
-    window.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
-      header.style.boxShadow = window.scrollY > 50
-        ? "0 4px 24px rgba(0,0,0,0.42)"
-        : "none";
-    });
-
-    /* =========================
-       Contact form: generate copy text (no backend)
-       ========================= */
-    const contactForm = document.getElementById("contactForm");
-    const formLive = document.getElementById("formLive");
-
-    contactForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const nome = document.getElementById("nome").value.trim();
-      const empresa = document.getElementById("empresa").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const tel = document.getElementById("telefone").value.trim();
-      const msg = document.getElementById("mensagem").value.trim();
-
-      const text =
-`Solicitação de proposta — Oceanic Treinamentos (Metalúrgicas)
-
-Nome: ${nome}
-Empresa: ${empresa}
-E-mail: ${email}
-Telefone/WhatsApp: ${tel || "-"}
-
-Mensagem:
-${msg || "-"}
-
-(Enviado a partir da landing page Metalúrgicas)`;
-
-      try {
-        await navigator.clipboard.writeText(text);
-        formLive.textContent = "Mensagem copiada para a área de transferência.";
-        alert("Mensagem copiada! Agora é só colar no WhatsApp ou e-mail.");
-      } catch (err) {
-        // Fallback: prompt
-        formLive.textContent = "Não foi possível copiar automaticamente. Copie manualmente no próximo campo.";
-        prompt("Copie a mensagem abaixo:", text);
-      }
-    });
-  </script>
-</body>
-</html>
+          </div>
+        </li>
+      </ul>
+      <div style="margin-top: 16px;">
+        <button class="btn-primary" onclick="document.getElementById('contato').scrollIntoView({
